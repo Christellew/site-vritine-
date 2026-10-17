@@ -13,7 +13,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
     margin: 15px auto 0 auto;
 }
 
@@ -29,18 +32,26 @@ nav {
     font-size: 20px;
 }
 
+#menu-button {
+    display: none;
+}
+
+
 
 /****** HEADER ******/
 
 header {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
     margin: 75px auto;
 }
 
 #header-content {
-    width: 630px;
+    max-width: 630px;
 }
 
 h1 {
@@ -51,7 +62,7 @@ h1 {
 
 
 #button-cv {
-    background: #FF6464;
+    background: #990000;
     color: #FFFFFF;
     text-decoration: none;
     font-size: 20px;
@@ -76,11 +87,16 @@ h1 {
  h2 {
     font-size: 22px;
     font-weight: 400;
-    padding-top: 20px;
+    padding-top: 10px;
+    text-align: center;
 }
 
+
  #blog-content {
-    width: 1200px;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
     margin: auto;
  }
 
@@ -94,9 +110,11 @@ h1 {
 .article-blog {
     background-color: #FFFFFF;
     border-radius: 4px;
-    width: 543px;
+    max-width: 543px;
     padding: 10px 20px;
     box-sizing: border-box;
+    max-width: 48%;
+
 }
 
 .article-title {
@@ -118,7 +136,10 @@ h1 {
 /****** PORTOFOLIO ******/
 
 #projets {
-    width: 1200px;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
     margin: auto;
 }
 
@@ -130,28 +151,30 @@ h1 {
 
 .projet-title {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     margin: 0 0 15px 0;
 }
 
 .projet-image {
-    width: 246px;
+    max-width: 246px;
+    border-radius: 4px;
   
 }
 
 .projet-bloc {
-    padding: 5px 70px;
+    padding: 0 0 90px 70px;
 }
 
 .projet-date {
     background: #142850;
     color: #FFFFFF;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     width: 62px;
     height: 25px;
     border-radius: 16px;
     text-align: center;
+    padding: 2px 2px 2px 2px;
 }
 
 .date-type {
@@ -160,8 +183,9 @@ h1 {
 }
 
 .projet-type {
-    color: #8695A4;
-    font-size: 20px;
+    color: #5C5C5C;
+    font-size: 16px;
+    
 }
 
 .projet-description {
@@ -171,7 +195,10 @@ h1 {
 /****** CONTACT ******/
 
 #contact {
-    width: 1200px;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
     margin: auto;
 }
 
@@ -194,7 +221,7 @@ h1 {
     font-size: 20px;
 }
 
-#email {
+#contact-email {
     font-size: 16px;
 }
 
@@ -207,28 +234,44 @@ form {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 10px;
+    gap: 15px;
+    color: #000000;
 }
 
 label {
     font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 input, select, textarea {
     background-color: #F7F7F7;
     border: none;
     height: 46px;
+    font-size: 14px;
 }
 
 textarea#message {
     height: 165px;
 }
 
+
+select {
+    font-size: 14px;
+    color: #545454;
+    border: none;
+}
+
+
+
 button {
     background-color: #000000;
     color: #FFFFFF;
     border: none;
     height: 56px;
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 
@@ -250,4 +293,61 @@ footer {
 #copyright {
     font-size: 14px;
     color: #21243D;
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-link {
+        display: none;
+    }
+
+    #menu-button {
+        display: block;
+    }
+
+    header {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    #header-content {
+        width: 100%;
+    }
+
+    h2#contact-type {
+        text-align: left;
+    }
+
+    #articles {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .article-blog {
+        max-width: none;
+        width: 100%;
+
+    }
+
+    .date-categorie {
+        gap: 15px;
+    }
+
+    .projet {
+        flex-direction: column;
+    }
+
+    .projet-image {
+        max-width: none;
+        width: 100%;
+    }
+
+    .projet-bloc {
+        padding: 0 0 30px 0
+    }
+
+    #coordonnees {
+        display: none;
+    }
 }
